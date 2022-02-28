@@ -1,11 +1,9 @@
-import { Component } from "react";
+import { Component } from 'react';
 
-class BaseLayouts extends Component{
-    render(){
-        return (
-            <div>{this.props.children}</div>
-        )
-    }
+class BaseLayouts extends Component {
+  render() {
+    return <div>{this.props.children}</div>;
+  }
 }
 
-export default BaseLayouts
+export default BaseLayouts;
