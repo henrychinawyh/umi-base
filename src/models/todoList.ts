@@ -15,24 +15,26 @@ const TodoList = {
   reducers: {
     // 更改当前namespace的state
     setTodoList(state: TodoListProps, action: AnyAction) {
-      const _state = JSON.parse(JSON.stringify(state));
+      const _state = Object.assign({}, state);
       const { type, value } = action.payload;
-      const flag = _state['todoList'].indexOf(value);
+      const todoList = [..._state['todoList']];
+      const flag = todoList.indexOf(value);
 
       if (type === 'add') {
         // 新增
         if (flag > -1) {
           // 如果有相同值的话，就删除已存在的值，插入新值
-          _state['todoList'].splice(flag, 1);
+          todoList.splice(flag, 1);
         }
-        _state['todoList'].push(value);
+        todoList.push(value);
       } else {
         // 删除
-        _state['todoList'].splice(flag, 1);
+        todoList.splice(flag, 1);
       }
 
       return {
         ..._state,
+        todoList,
       };
     },
   },
