@@ -1,6 +1,7 @@
-import routes from './routes';
-import { defineConfig } from 'umi';
 import analyze from './analyze';
+import { defineConfig } from 'umi';
+import routes from './routes';
+
 // import chainWebpack from './plugins'
 
 export default defineConfig({
@@ -11,7 +12,7 @@ export default defineConfig({
   routes,
   base: '/',
   // chainWebpack,
-  chunks: ['umi'], // 做分包处理，详情请查询https://umijs.org/zh-CN/config#chunks
+  // chunks: ['umi'], // 做分包处理，详情请查询https://umijs.org/zh-CN/config#chunks
   // cssLoader:{
   //   // localsConvention:'camelCase' // 将className名转为驼峰形式
   // },
@@ -44,8 +45,8 @@ export default defineConfig({
   // plugins:[], // 配置额外的插件
   // postcssLoader:{} // postcss-loader
   publicPath: '/', // 静态文件访问地址
-  targets: {
-    ie: 11,
-    chrome: 90,
-  },
+  // targets: {
+  //   ie: 11,
+  //   chrome: 90,
+  // },
 });

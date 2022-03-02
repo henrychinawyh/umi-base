@@ -7,7 +7,7 @@
     "prettier": "prettier --write \"src/**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
-    "analyze":"ANALYZE=1 umi build"
+    "analyze": "ANALYZE=1 umi build"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
