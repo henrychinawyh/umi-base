@@ -44,6 +44,7 @@ export default defineConfig({
   outputPath: 'dist', // 输出指定目录
   // plugins:[], // 配置额外的插件
   // postcssLoader:{} // postcss-loader
+  // runtimePublicPath:false, // 配置运行时是否启用publicPath
   publicPath: '/', // 静态文件访问地址
   // targets: {
   //   ie: 11,
