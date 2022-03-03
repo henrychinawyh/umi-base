@@ -1,0 +1,10 @@
+/node_modules
+/public
+/assets
+/scripts
+/config
+.history
+test_node_modules
+dist
+build
+temp

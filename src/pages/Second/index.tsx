@@ -1,7 +1,5 @@
 const Second = () => {
-  console.log(12);
-
-  return <div>321</div>;
+  return <h1>第二页</h1>;
 };
 
 export default Second;

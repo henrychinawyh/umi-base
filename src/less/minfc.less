@@ -1,0 +1,92 @@
+/*
+  全局样式函数
+*/
+
+.flexDisplay(@direction: column, @justify: center, @align: center) {
+  display: flex;
+  flex-direction: @direction;
+  align-items: @align;
+  justify-content: @justify;
+}
+.boxSizing(@type) {
+  -webkit-box-sizing: @type;
+  -o-box-sizing: @type;
+  -ms-box-sizing: @type;
+  box-sizing: @type;
+  -moz-animation: @type;
+}
+
+.bottomBorder(@borderColor: #ccc) {
+  &:before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: 1px;
+    background-color: @borderColor;
+    content: '';
+    pointer-events: none;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+      & {
+        transform: scaleY(0.5);
+        transform-origin: 50% 100%;
+      }
+    }
+  }
+}
+
+// 多行省略号
+.ellipseMixLine(@lineCount:2) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: @lineCount;
+  -webkit-box-orient: vertical;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.borderArround(@color: @splitColor3) {
+  border: 1px solid @color;
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    border: 0.5px solid @color;
+  }
+}
+
+.bgImage(@url) {
+  .bgPureImage(@url);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.bgPureImage(@url) {
+  background-image: ~'url(@{baseImgUrl}@{url})';
+}
+
+.flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexBetweenCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flexStartCenter() {
+  display: flex;
+  align-items: center;
+}
+
+.flexEndCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

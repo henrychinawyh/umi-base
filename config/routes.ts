@@ -1,11 +1,9 @@
 export default [
-  { path: '/login', exact: true, component: '@/pages/index' },
+  { path: '/login', component: '@/pages/Login' },
   {
     path: '/',
     component: '@/layouts/BaseLayouts',
-    // wrappers:[
-    //     '@/wrappers/auth'
-    // ],
+    wrappers: ['@/wrappers/auth'],
     // title:'umi',
     routes: [
       {
